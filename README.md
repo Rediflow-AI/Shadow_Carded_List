@@ -13,7 +13,6 @@ and the Flutter guide for
 
 [![License](https://img.shields.io/github/license/Rediflow-AI/Shadow_Carded_List)](https://github.com/Rediflow-AI/Shadow_Carded_List/blob/main/LICENSE)
 [![pub version](https://img.shields.io/pub/v/shadowed_carded_list.svg)](https://pub.dev/packages/shadowed_carded_list)
-[![Build Status](https://github.com/Rediflow-AI/Shadow_Carded_List/actions/workflows/ci.yml/badge.svg)](https://github.com/Rediflow-AI/Shadow_Carded_List/actions)
 
 # shadowed_carded_list
 
