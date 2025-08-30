@@ -1,0 +1,17 @@
+name: shadowed_carded_list_example
+description: Example app for the shadowed_carded_list package
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: ">=3.8.1 <4.0.0"
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shadowed_carded_list:
+    path: ..
+
+flutter:
+  uses-material-design: true
