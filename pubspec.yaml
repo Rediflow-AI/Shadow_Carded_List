@@ -5,7 +5,6 @@ homepage: https://github.com/Rediflow-AI/Shadow_Carded_List
 repository: https://github.com/Rediflow-AI/Shadow_Carded_List
 issue_tracker: https://github.com/Rediflow-AI/Shadow_Carded_List/issues
 documentation: https://github.com/Rediflow-AI/Shadow_Carded_List#readme
-publish_to: "none" # Change to a valid server or remove before publishing
 
 environment:
   sdk: ">=3.8.0 <4.0.0"

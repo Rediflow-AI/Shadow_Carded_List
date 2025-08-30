@@ -11,6 +11,10 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
+[![License](https://img.shields.io/github/license/Rediflow-AI/Shadow_Carded_List)](https://github.com/Rediflow-AI/Shadow_Carded_List/blob/main/LICENSE)
+[![pub version](https://img.shields.io/pub/v/shadowed_carded_list.svg)](https://pub.dev/packages/shadowed_carded_list)
+[![Build Status](https://github.com/Rediflow-AI/Shadow_Carded_List/actions/workflows/ci.yml/badge.svg)](https://github.com/Rediflow-AI/Shadow_Carded_List/actions)
+
 # shadowed_carded_list
 
 Lightweight Flutter package that provides a polished card-style container
@@ -105,3 +109,55 @@ contributing you agree to the terms of that license.
 
 ---
 Package maintained by Rediflow AI.
+
+## Advanced usage
+
+You can customize the appearance and behavior of `CardedList` and the
+inner `ShadowedScrollableList` using the following examples.
+
+- Custom card decoration and spacing:
+
+```dart
+CardedList<String>(
+  header: Text('Users'),
+  items: users,
+  cardDecoration: BoxDecoration(
+    color: Colors.white,
+    borderRadius: BorderRadius.circular(12),
+    boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 12)],
+  ),
+  headerPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+  spacing: 12,
+  itemBuilder: (c, i) => ListTile(title: Text(users[i])),
+)
+```
+
+- Using `ShadowedScrollableList` standalone (no outer card):
+
+```dart
+ShadowedScrollableList<String>(
+  items: items,
+  listBuilder: (c, i) => Text(items[i]),
+  shadowSize: 18.0,
+  showScrollbar: true,
+)
+```
+
+## Screenshots
+
+Preview images are included as placeholders in `assets/screenshots/`.
+Replace them with your own screenshots for documentation or the package
+page on pub.dev.
+
+![Preview 1](assets/screenshots/preview.svg)
+![Preview 2](assets/screenshots/preview-2.svg)
+
+## Publishing checklist
+
+Before publishing to pub.dev:
+
+1. Remove `publish_to: 'none'` from `pubspec.yaml`.
+2. Bump the package version in `pubspec.yaml`.
+3. Run the publish dry-run locally (see `PUBLISHING.md` for exact steps).
+
+---

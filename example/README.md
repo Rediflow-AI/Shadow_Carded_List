@@ -35,3 +35,10 @@ This folder contains a small Flutter app demonstrating the `shadowed_carded_list
 
 If you find bugs or need features, please open an issue on the repository:
 https://github.com/Rediflow-AI/Shadow_Carded_List/issues
+
+## Screenshots
+
+The example includes placeholder screenshots located in `assets/screenshots`.
+Replace with real images for README or pub.dev display.
+
+![Example preview](../assets/screenshots/preview.svg)
