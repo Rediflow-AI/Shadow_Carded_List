@@ -148,8 +148,7 @@ Preview images are included as placeholders in `assets/screenshots/`.
 Replace them with your own screenshots for documentation or the package
 page on pub.dev.
 
-![Preview 1](assets/screenshots/preview.svg)
-![Preview 2](assets/screenshots/preview-2.svg)
+![Preview](assets/screenshots/preview.png)
 
 ## Publishing checklist
 

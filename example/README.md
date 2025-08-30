@@ -41,4 +41,4 @@ https://github.com/Rediflow-AI/Shadow_Carded_List/issues
 The example includes placeholder screenshots located in `assets/screenshots`.
 Replace with real images for README or pub.dev display.
 
-![Example preview](../assets/screenshots/preview.svg)
+![Example preview](../assets/screenshots/preview.png)
