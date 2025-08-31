@@ -60,7 +60,7 @@ class Example extends StatelessWidget {
 
 ```yaml
 dependencies:
-  shadowed_carded_list: ^0.1.0
+  shadowed_carded_list: ^0.2.0
 ```
 
 2. Import the package and use `CardedList` as shown in the quick example.
