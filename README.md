@@ -75,6 +75,8 @@ Public symbols exported from the package:
   - `items`: required `List<T>` of items
   - `itemBuilder`: required builder `(BuildContext, int) -> Widget?`
   - `emptyListMessage`: optional text shown when list is empty
+  - `shadowSize`: optional double to control the height of scroll shadows (default: 16.0)
+  - `shadowColor`: optional Color for the scroll shadows
   - `cardDecoration`, `headerPadding`, `spacing` for styling
 
 - `ShadowedScrollableList<T>` — Lower-level widget if you need the scroll
@@ -128,6 +130,18 @@ CardedList<String>(
   headerPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
   spacing: 12,
   itemBuilder: (c, i) => ListTile(title: Text(users[i])),
+)
+```
+
+- Custom shadow appearance:
+
+```dart
+CardedList<String>(
+  header: Text('My Items'),
+  items: items,
+  shadowSize: 24.0,  // Larger shadow for more pronounced effect
+  shadowColor: Colors.black26,  // Darker shadow color
+  itemBuilder: (c, i) => ListTile(title: Text(items[i])),
 )
 ```
 

@@ -53,4 +53,27 @@ void main() {
 
     expect(find.text('Nothing here'), findsOneWidget);
   });
+
+  testWidgets('accepts custom shadow parameters', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: SizedBox(
+            height: 200,
+            child: CardedList<String>(
+              header: const Text('H'),
+              items: const ['Item 1'],
+              shadowSize: 24.0,
+              shadowColor: Colors.red,
+              itemBuilder: (context, index) => const Text('Item 1'),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    // The widget should render without errors with custom shadow parameters
+    expect(find.text('H'), findsOneWidget);
+    expect(find.text('Item 1'), findsOneWidget);
+  });
 }
