@@ -15,6 +15,8 @@ class CardedList<T> extends StatelessWidget {
     this.cardDecoration,
     this.headerPadding = const EdgeInsets.all(16),
     this.spacing = 8.0,
+    this.shadowSize = 16.0,
+    this.shadowColor,
   });
 
   final Widget header;
@@ -26,6 +28,8 @@ class CardedList<T> extends StatelessWidget {
   final BoxDecoration? cardDecoration;
   final EdgeInsets headerPadding;
   final double spacing;
+  final double shadowSize;
+  final Color? shadowColor;
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +60,8 @@ class CardedList<T> extends StatelessWidget {
               items: items,
               emptyListMessage: emptyListMessage,
               listBuilder: itemBuilder,
+              shadowSize: shadowSize,
+              shadowColor: shadowColor,
             ),
           ),
           SizedBox(height: spacing),

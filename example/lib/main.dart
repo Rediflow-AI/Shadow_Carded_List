@@ -28,6 +28,7 @@ class ExampleHomePage extends StatefulWidget {
 class _ExampleHomePageState extends State<ExampleHomePage> {
   final List<String> _items = [];
   int _counter = 0;
+  double _shadowSize = 16.0;
 
   void _addItem() {
     setState(() {
@@ -80,6 +81,7 @@ class _ExampleHomePageState extends State<ExampleHomePage> {
                 footer: Text('${_items.length} item(s)'),
                 items: _items,
                 emptyListMessage: 'No items yet. Tap + to add one.',
+                shadowSize: _shadowSize,
                 itemBuilder: (context, index) {
                   final text = _items[index];
                   return ListTile(
@@ -91,7 +93,23 @@ class _ExampleHomePageState extends State<ExampleHomePage> {
               ),
             ),
             const SizedBox(height: 12),
-            Text('Demo controls: add / clear inside the header buttons'),
+            Column(
+              children: [
+                Text('Shadow Size: ${_shadowSize.round()}px'),
+                Slider(
+                  value: _shadowSize,
+                  min: 0,
+                  max: 40,
+                  divisions: 40,
+                  onChanged: (value) {
+                    setState(() {
+                      _shadowSize = value;
+                    });
+                  },
+                ),
+                const Text('Demo controls: add / clear inside the header buttons'),
+              ],
+            ),
           ],
         ),
       ),
